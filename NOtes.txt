@@ -1,14 +1,14 @@
 Store is used to store our data or a toll to manage data.
 Now we will compare redux and useReducer.
 
-Now everthing on redux is sophesticated. 
+There are few different ways in redux
 here consider store as a state, prev we used to destructure (const [] = useReducer()), now in redux we just put store, and create a store , like createStore(), and give the reducer and initial state.
 As now we are working with redux, lets name it to initialStore = {}
 
 Always return a state from a reducer. //updated or old state but return something
 
 getState:
-When we createa  store in redux functionw we have access to the getState function. with this, we will get or state
+When we create a  store in redux functionw we have access to the getState function. with this, we will get or state
 
 prev we had a array, which had the current state and dispatch func, now in redux its a object which is named store and toa ccess the current state and dispacth we use store.getState and store.dispatch
 
@@ -17,3 +17,24 @@ prev we had a array, which had the current state and dispatch func, now in redux
 
 
 actions: we use stoer.dispatch({type:'INCREASE}), we do like this.
+
+
+
+Provider setup:
+Provider - wraps app.
+connect - used in components, to connect to state(store) , so that we can access data and allso use `dispacth` method.
+
+connect : its a higher order compoennt, it returns a component itself, so we write connect() -> first func commect is returning.
+
+connecting Navbar
+
+so we return a connect the navbar with the store and we can pass mapStatetoProps func as a parameter, and that func can be used to return a plain obj which will be our props obj.
+and after doing this we will get our props.
+
+
+Connecting CartContainer.
+
+
+
+
+
