@@ -1,3 +1,4 @@
+"redux-devtools-extension": "^2.13.9"
 Store is used to store our data or a toll to manage data.
 Now we will compare redux and useReducer.
 
@@ -24,7 +25,10 @@ Provider setup:
 Provider - wraps app.
 connect - used in components, to connect to state(store) , so that we can access data and allso use `dispacth` method.
 
-connect : its a higher order compoennt, it returns a component itself, so we write connect() -> first func commect is returning.
+connect : its a higher order compoennt, it returns a component itself, so we write connect() -> first func commect is returning..
+
+there are two parameter and both are functions, first is mapStateToProps and seconf is mapDispatchToProps (can name anything,  have mention the naming conventions).
+while the first provides dispatch to the cmpoennt, with the second i can use the dispacth directly without destructuring it.
 
 connecting Navbar
 
@@ -32,7 +36,7 @@ so we return a connect the navbar with the store and we can pass mapStatetoProps
 and after doing this we will get our props.
 
 
-Connecting CartContainer.
+Connecting CartContainer:
 
 
 

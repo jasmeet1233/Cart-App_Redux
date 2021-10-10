@@ -6,14 +6,14 @@ import CartContainer from "./components/CartContainer";
 import cartItems from "./cart-items";
 // redux stuff
 import { createStore } from "redux";
-import { INCREASE, DECREASE, RESET } from "./actions";
+import { INCREASE, DECREASE, REMOVE } from "./actions";
 import { reducer } from "./reducer";
 import { Provider } from "react-redux";
 
 const initialStore = {
   cart: cartItems,
-  total: 0,
-  amount:7
+  total: 500,
+  amount: 7
 };
 
 const store = createStore(reducer, initialStore);
@@ -24,7 +24,7 @@ function App() {
   return (
     <Provider store = {store}>
       <Navbar />
-      <CartContainer cart={cartItems} />
+      <CartContainer/>
     </Provider>
   );
 }
